@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background: radial-gradient(circle, rgba(255,255,255,0.47942927170868344) 18%, rgba(128, 203, 196, 0.365) 100%)
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+  @keyframes ring-animation {
+    0% {
+      box-shadow: 0 0 0 0 	rgb(10, 10, 10);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(202, 138, 4, 0);
+    }
+  }
+  .ring-animation {
+    animation: ring-animation 2s infinite;
+  }.text-gradient {
+    background: linear-gradient(  #66BB6A, #1E88E5); /* Gradient from purple to blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
