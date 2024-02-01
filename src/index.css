@@ -15,7 +15,7 @@ body{
   .fade-in {
     animation: fadeIn 0.3s ease-in;
   }
-  @keyframes ring-animation {
+  /* @keyframes ring-animation {
     0% {
       box-shadow: 0 0 0 0 	rgb(10, 10, 10);
     }
@@ -24,8 +24,9 @@ body{
     }
   }
   .ring-animation {
-    animation: ring-animation 2s infinite;
-  }.text-gradient {
+    animation: ring-animation 2s infinite; */
+  /* }*/
+  .text-gradient { 
     background: linear-gradient(  #66BB6A, #1E88E5); /* Gradient from purple to blue */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
