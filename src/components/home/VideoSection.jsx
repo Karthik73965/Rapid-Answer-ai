@@ -52,7 +52,7 @@ const VideoSection = () => {
     });
 
     return (
-        <div className='mx-10'>
+        <div className='mx-10 mt-24'>
             {isMobile ? (
                 <select
                     value={selectedCategory.key}
