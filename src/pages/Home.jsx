@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/home/Hero'
 import VideoSection from '../components/home/VideoSection'
 import Subjects from '../components/home/Subjects'
+import Reviews from '../components/home/Reviews'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/>
       <VideoSection/>
       <Subjects/>
+      <Reviews/>
     </div>
    </>
   )
