@@ -4,6 +4,7 @@ import Hero from '../components/home/Hero'
 import VideoSection from '../components/home/VideoSection'
 import Subjects from '../components/home/Subjects'
 import Reviews from '../components/home/Reviews'
+import Feautures from '../components/home/Feautures'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <VideoSection/>
       <Subjects/>
       <Reviews/>
+      <Feautures/>
     </div>
    </>
   )

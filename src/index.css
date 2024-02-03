@@ -6,6 +6,10 @@
 body{
     background: radial-gradient(circle, rgba(255,255,255,0.47942927170868344) 18%, rgba(128, 203, 196, 0.365) 100%)
   }
+  .fotter{
+    background: radial-gradient(circle, rgba(255,255,255,0.47942927170868344) 18%, rgba(128, 203, 196, 0.365) 100%)
+
+  }
 
   @keyframes fadeIn {
     from { opacity: 0; }
