@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { TbMathSymbols } from "react-icons/tb";
 import { HiArrowSmRight } from "react-icons/hi";
+import { CgProfile } from "react-icons/cg";
+
 import 'tailwindcss/tailwind.css';
 
 const DropdownItem = ({ children }) => {
@@ -13,10 +15,10 @@ const DropdownItem = ({ children }) => {
     );
 };
 
-const Navbar = () => {
+const DashboardNav= () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const login = true; // This should ideally be derived from your authentication state
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);    
+    const [isProfileOpen, setIsprofileOpen] = useState(false);    
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,7 +37,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`fixed font-semibold text-black w-full z-10 ${isScrolled ? 'bg-white shadow-md ' : 'bg-transparent '} transition-all`}>
+        <header className={`fixed font-semibold  shadow-md text-black w-full z-10 ${isScrolled ? 'bg-white shadow-md ' : 'bg-transparent '} transition-all`}>
             <nav className="flex items-center justify-around p-4">
                 {/* Logo */}
                 <div className="logo">
@@ -44,13 +46,12 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* Menu items */}
-                     {/* Menu items */}
-                     <div className="hidden md:flex space-x-4 ">
+                    {/* Menu items */}
+                    <div className="hidden md:flex space-x-4 ">
                         {/* Add dropdown logic and items */}
                         {/* Dropdown */}
                         <div
-                            className="dropdown flex justify-center items-center gap- 4 cursor-pointer"
+                            className="dropdown flex justify-center items-center gap-x-6 cursor-pointer"
                             onMouseEnter={() => setIsDropdownOpen(true)}
                             onMouseLeave={() => setIsDropdownOpen(false)}
                         >   
@@ -82,43 +83,46 @@ const Navbar = () => {
                             )}
                         </div>
 
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Chatbot</span></div>
+                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Ai chat</span></div>
                         {/* <div className="dropdown">Pricing</div> */}
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Blogs</span></div>
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>About</span></div>
+                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Discussions</span></div>
+                     
                     </div>
 
-
                 {/* Conditionally render buttons based on login state */}
-                <div className="hidden md:flex space-x-4">
-                    {login ? (
-                        <Link to="/dashboard">
-                           <button className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
-                           <div className='flex items-center justify-center gap-x-3'>
-                                        Dashboard <HiArrowSmRight size={20} />
-                                    </div>   
-                                </button>
-                        </Link>
-                    ) : (
-                        <>
-                            <Link to="/signup">
-                                <button className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
-                                    Login
-                                </button>
-                            </Link>
-                            <Link to="/signin">
-                                <button type="button" className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
-                                    <div className='flex items-center justify-center gap-x-3'>
-                                        Start for free <HiArrowSmRight size={20} />
-                                    </div>
-                                </button>
-                            </Link>
-                        </>
-                    )}
-                </div>
+                <div
+                            className="dropdown flex justify-center items-center gap- 4 p-2 rounded-lg cursor-pointer bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+                            onMouseEnter={() => setIsprofileOpen(true)}
+                            onMouseLeave={() => setIsprofileOpen(false)}
+                        >   
+                            <span className="  transition ease-in duration-300 text-white font-bold  "><span className='flex align-middle justify-center' > <CgProfile className='m-1' size={20}/>
+profile</span></span>
+                            {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
+
+                            {isProfileOpen && (
+                                <div className="absolute  mt-[145px] py-2 bg-white shadow-lg rounded-lg fade-in">
+                                    <DropdownItem>
+                                        <div className='flex  '>
+                                            <TbMathSymbols color='black' size={'25px'} />
+                                            <div >Settigns</div>
+
+                                        </div>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <div className='flex  '>
+                                            <TbMathSymbols color='black' size={'25px'} />
+                                            <div >Logout</div>
+
+                                        </div>
+                                    </DropdownItem>
+                                   
+                                </div>
+                            )}
+                        </div>
+
             </nav>
         </header>
     );
 };
 
-export default Navbar;
+export default DashboardNav;
