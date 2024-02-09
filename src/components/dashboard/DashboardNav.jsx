@@ -37,17 +37,17 @@ const DashboardNav= () => {
     }, []);
 
     return (
-        <header className={`fixed font-semibold  shadow-md text-black w-full z-10 ${isScrolled ? 'bg-white shadow-md ' : 'bg-transparent '} transition-all`}>
-            <nav className="flex items-center justify-around p-4">
+        <header className={`fixed font-semibold text-black w-full mx-8 z-10 ${isScrolled ? ' ' : 'bg-transparent '} transition-all`}>
+            <nav className="flex items-center  justify-evenly p-4">
                 {/* Logo */}
-                <div className="logo">
+                {/* <div style={{borderRight: '1px solid #ccc'}} className="logo ">
                     <Link to="/">
-                        <h1 className='text-xl'>DasTekEdu</h1>
+                        <h1 className='text-xl mr-10'></h1>
                     </Link>
-                </div>
+                </div> */}
 
                     {/* Menu items */}
-                    <div className="hidden md:flex space-x-4 ">
+                    <div className="hidden md:flex  ">
                         {/* Add dropdown logic and items */}
                         {/* Dropdown */}
                         <div
@@ -55,7 +55,7 @@ const DashboardNav= () => {
                             onMouseEnter={() => setIsDropdownOpen(true)}
                             onMouseLeave={() => setIsDropdownOpen(false)}
                         >   
-                            <span className=" hover:text-green-700 transition ease-in duration-300">Subjects</span>
+                            <span className=" hover:text-green-700 transition text-xl font-bold ease-in duration-300">Subjects</span>
                             {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
 
                             {isDropdownOpen && (
@@ -76,27 +76,27 @@ const DashboardNav= () => {
                                     <DropdownItem>
                                         <div className='flex gap-2'>
                                             <TbMathSymbols color='black' size={'25px'} />
-                                            <div >Maths<p className='text-blue-400'>this is for maths</p></div>
+                                     <div >Maths<p className='text-blue-400'>this is for maths</p></div>
                                         </div>
                                     </DropdownItem>
                                 </div>
                             )}
                         </div>
 
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Ai chat</span></div>
+                        <div className="dropdown flex justify-center mx-3  text-xl font-bold align-middle"><span>Ai chat</span></div>
                         {/* <div className="dropdown">Pricing</div> */}
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Discussions</span></div>
+                        <div className="dropdown flex justify-center gap-1 mx-3 font-bold text-xl  align-middle"><span>Discussions</span></div>
                      
                     </div>
 
                 {/* Conditionally render buttons based on login state */}
                 <div
-                            className="dropdown flex justify-center items-center gap- 4 p-2 rounded-lg cursor-pointer bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+                            className="dropdown flex justify-center items-center mr-8 gap- 4 p-2 rounded-lg cursor-pointer bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
                             onMouseEnter={() => setIsprofileOpen(true)}
                             onMouseLeave={() => setIsprofileOpen(false)}
                         >   
                             <span className="  transition ease-in duration-300 text-white font-bold  "><span className='flex align-middle justify-center' > <CgProfile className='m-1' size={20}/>
-profile</span></span>
+                            profile</span></span>
                             {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
 
                             {isProfileOpen && (
@@ -104,7 +104,7 @@ profile</span></span>
                                     <DropdownItem>
                                         <div className='flex  '>
                                             <TbMathSymbols color='black' size={'25px'} />
-                                            <div >Settigns</div>
+                                            <div className='' >Settigns</div>
 
                                         </div>
                                     </DropdownItem>

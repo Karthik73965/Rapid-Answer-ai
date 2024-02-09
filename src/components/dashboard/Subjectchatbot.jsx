@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HiArrowSmRight } from 'react-icons/hi';
 import { IoSend, IoImage, IoAttach } from 'react-icons/io5';
+import DashboardNav from './DashboardNav';
 
 const QuestionForm = ({ endpoint }) => {
     const [question, setQuestion] = useState('');
@@ -48,6 +49,8 @@ const QuestionForm = ({ endpoint }) => {
 
     return (
         <>
+           <DashboardNav/>
+           <div className='h-[100px]'></div>
             <div className='grid place-items-center'>
                 <h1 className="text-4xl font-bold mb-4 text-gradient" >The evolution of 24/7 study starts here</h1>
                 <p className="mb-4 text-slate-900 font-bold">Any question. Any subject. Get instant, step-by-step solutions the moment you need them.</p>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { GrSafariOption } from "react-icons/gr";
 import Subjechatbot from '../../components/dashboard/Subjectchatbot';
+import { Link } from 'react-router-dom';
+import DashboardNav from './DashboardNav';
 
 const options = [
   { name: 'Maths', content: 'Homework Help Content' },
@@ -15,13 +17,21 @@ const Sidebar = () => {
   const [activeOption, setActiveOption] = useState(options[0].name); // Added state to track active option
 
   return (
-    <div className='h-[85vh]' style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <>
+      
+    <div className='min-h-[100vh]' style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className='h-[100px] mb-11'></div>
       <div style={{ width: '20%', borderRight: '1px solid #ccc' }}>
+      <div  className=' px-[40px] py-[10px] text-3xl font-bold ' >
+                    <Link to="/">
+                        <h1 className='text  text-slate-900 mt-6 mb-3 mr-10'>DasTekEdu</h1>
+                    </Link>
+                </div>
         <div className='text-gradient px-[40px] py-[10px] text-3xl font-bold mb-6 underline'>Subjects</div>
         {options.map((option) => (
           <div
             key={option.name}
-            className={`m-[15px] rounded-xl  ${activeOption === option.name ? 'bg-green-300' : ''}`} // Conditional styling
+            className={`m-[15px] rounded-xl  ${activeOption === option.name ? 'bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl opacity-90' : ''}`} // Conditional styling
             style={{ cursor: 'pointer' }}
             onClick={() => {
               setActiveContent(option.content);
@@ -39,6 +49,7 @@ const Sidebar = () => {
        <Subjechatbot content={activeContent}/>  {/* Pass activeContent as a prop */}
       </div>
     </div>
+    </>
   );
 };
 

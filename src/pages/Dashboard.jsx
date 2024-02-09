@@ -5,7 +5,6 @@ export default function Dashboard() {
   return (
     <>
     <div className='bg '>
-    <DashboardNav/> <div className='h-[100px]'></div>
     <MainDash />
     </div>
     </>
