@@ -37,7 +37,7 @@ const DashboardNav= ({LOGO}) => {
     }, []);
 
     return (
-        <header className={`fixed font-semibold text-black w-full mx-8 z-10 ${isScrolled ? ' ' : 'bg-transparent '} transition-all`}>
+        <header className={`fixed font-semibold text-black w-full mx-8 z-10 ${isScrolled ? 'bg-white ' : 'bg-transparent '} transition-all`}>
             <nav className="flex items-center  justify-evenly p-4">
                 {LOGO && <div style={{borderRight: '1px solid #ccc'}} className="logo ">
                     <Link to="/">
