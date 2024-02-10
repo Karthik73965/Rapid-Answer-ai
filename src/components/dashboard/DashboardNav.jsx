@@ -15,7 +15,7 @@ const DropdownItem = ({ children }) => {
     );
 };
 
-const DashboardNav= () => {
+const DashboardNav= ({LOGO}) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);    
     const [isProfileOpen, setIsprofileOpen] = useState(false);    
@@ -39,12 +39,11 @@ const DashboardNav= () => {
     return (
         <header className={`fixed font-semibold text-black w-full mx-8 z-10 ${isScrolled ? ' ' : 'bg-transparent '} transition-all`}>
             <nav className="flex items-center  justify-evenly p-4">
-                {/* Logo */}
-                {/* <div style={{borderRight: '1px solid #ccc'}} className="logo ">
+                {LOGO && <div style={{borderRight: '1px solid #ccc'}} className="logo ">
                     <Link to="/">
-                        <h1 className='text-xl mr-10'></h1>
+                        <h1 className='text-2xl font-bold mr-10'>Dastekedu</h1>
                     </Link>
-                </div> */}
+                </div>}
 
                     {/* Menu items */}
                     <div className="hidden md:flex  ">
@@ -83,7 +82,9 @@ const DashboardNav= () => {
                             )}
                         </div>
 
+                        <Link to='/aichat'>
                         <div className="dropdown flex justify-center mx-3  text-xl font-bold align-middle"><span>Ai chat</span></div>
+                        </Link>
                         {/* <div className="dropdown">Pricing</div> */}
                         <div className="dropdown flex justify-center gap-1 mx-3 font-bold text-xl  align-middle"><span>Discussions</span></div>
                      
