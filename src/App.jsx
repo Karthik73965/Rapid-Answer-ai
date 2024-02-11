@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard'
 import AiChar from './pages/AiChat'
 import Disscussions from './pages/Disscussions'
 import Individualdisscussion from './pages/Indivialdisscussion'
+import Chathistory from './pages/Chathistory'
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
       <Route exact  path='/Aichat' element={<AiChar/>} />
       <Route exact  path='/discussions' element={<Disscussions/>} />
       <Route exact  path='/discussions/id' element={<Individualdisscussion/>} />
+      <Route exact  path='/chathistory' element={<Chathistory/>} />
       <Route
              path="*"
              element={<PageNotFound />}
