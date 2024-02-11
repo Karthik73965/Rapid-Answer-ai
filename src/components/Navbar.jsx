@@ -85,7 +85,9 @@ const Navbar = () => {
                         <div className="dropdown flex justify-center gap-1  align-middle"><span>Chatbot</span></div>
                         {/* <div className="dropdown">Pricing</div> */}
                         <div className="dropdown flex justify-center gap-1  align-middle"><span>Blogs</span></div>
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>About</span></div>
+                       <Link to={'/About'}>
+                       <div className="dropdown flex justify-center gap-1  align-middle"><span>About</span></div>
+                       </Link>
                     </div>
 
 
