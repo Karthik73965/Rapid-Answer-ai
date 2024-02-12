@@ -8,6 +8,7 @@ import Disscussions from './pages/Disscussions'
 import Individualdisscussion from './pages/Indivialdisscussion'
 import Chathistory from './pages/Chathistory'
 import About from './pages/About'
+import Blogs from './pages/Blogs'
 
 
 
@@ -23,6 +24,7 @@ export default function App() {
       <Route exact  path='/discussions/id' element={<Individualdisscussion/>} />
       <Route exact  path='/chathistory' element={<Chathistory/>} />
       <Route exact  path='/About' element={<About/>} />
+      <Route exact  path='/blogs' element={<Blogs/>} />
       <Route
              path="*"
              element={<PageNotFound />}

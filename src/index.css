@@ -31,11 +31,11 @@ body .bg {
     animation: ring-animation 2s infinite; */
   /* }*/
   .text-gradient { 
-    background: linear-gradient(  #66BB6A, #1E88E5); /* Gradient from purple to blue */
+    background: linear-gradient(to right, #ffc107, #f77825, #ffc900);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
+    text-fill-color: transparent;
   }
   .swiper {
     position: relative;
