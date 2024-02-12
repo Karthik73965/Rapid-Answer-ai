@@ -28,7 +28,7 @@ export default function OurVision() {
                                 {options.map((option) => (
                                     <button
                                         key={option.id}
-                                        className={`px-4 py-2 rounded-lg ${active === option.id ? 'bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl text-white' : 'bg-gray-200 text-gray-700'}`}
+                                        className={`px-4 py-2 rounded-lg ${active === option.id ? 'bg-blackhover:bg-gradient-to-bl text-white' : 'bg-gray-200 text-gray-700'}`}
                                         onClick={() => handleClick(option.id)}
                                     >
                                         <div className='flex'>{option.icon}

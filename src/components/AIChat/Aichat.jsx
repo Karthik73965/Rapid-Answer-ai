@@ -77,12 +77,15 @@ export default function Aichat() {
       <div className="flex flex-col h-[80vh] bg-transparent sticky sm:h-[88vh]">
         <div className="overflow-auto p-3 flex-grow">
           {messages.map((msg, index) => (
-            <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`rounded-2xl px-4 py-2 my-1 ${msg.sender === 'user' ? '  border-4 border-blue-400 ' : '  border-4 border-blue-400'}`}>
+            <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end  ' : 'justify-start'}`}>
+              <div className={`rounded-2xl px-4 py-2 my-1 ${msg.sender === 'user' ? ' min-w-[30vw]  border-2 bg-green-100  border-black' : '  border-2 min-w-[60vw]  border-gray-700 bg-gray-100'}`}>
+                {
+                  msg.sender =='server' ? <div className='text-gradient font-bold'>{" NextGen :"}</div> : <div className='text-gradient font-bold '>{"You :"}</div>
+                }
                 {msg.text}
                 {
                   (msg.sender === 'server') &&  (msg.text !== 'HI WELCOME BACL TO HERE DASTEK EDU YOU CAN ASK ANY QUESTIONS HERES') &&
-                  <div className='flex gap-x-10 mt-5'>
+                  <div className='flex gap-x-4 text-gray-700 mt-5'>
                     <BiSolidLike size={20} />
                     <BiSolidDislike size={20} />
                     <FaCopy size={20} />
@@ -98,7 +101,7 @@ export default function Aichat() {
           {file && 
             <img src={file}/>
           }
-          <div className="flex rounded-2xl  p-1 border-blue-400 border-4 overflow-hidden">
+          <div className="flex rounded-2xl  p-1 border-black border-2  overflow-hidden">
             <input
               type="file"
               ref={fileInputRef}
@@ -114,7 +117,7 @@ export default function Aichat() {
             />
             <button
               onClick={triggerFileInput}
-              className="py-2 px-4 rounded-xl h-10 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl text-white font-semibold m-1  text-sm"
+              className="py-2 px-4 rounded-xl h-10 bg-black  text-white font-semibold m-1  text-sm"
             >
               <MdAddToPhotos />
 
@@ -129,7 +132,7 @@ export default function Aichat() {
             />
             <button
               onClick={sendMessage}
-              className=" bg-gradient-to-br rounded-xl from-green-400 to-blue-600 hover:bg-gradient-to-bl text-white px-4 py-2 focus:outline-none"
+              className="bg-black rounded-2xl text-white px-4 py-2 focus:outline-none"
             >
               <IoSendSharp />
 

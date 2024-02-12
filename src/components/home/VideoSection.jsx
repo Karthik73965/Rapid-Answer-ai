@@ -20,7 +20,7 @@ const ContentDisplay = ({ category }) => {
                     {/* <div className='text-xl font-semibold my-2'>{category.heading}</div> */}
                     <div className='text-xl  text-slate-600 font-semibold my-2 '>"Content for {category.description}"</div>
                     <div className='text-xl  text-slate-600 font-semibold my-2 '>"Content for {category.description}"</div>
-                    <button type="button" className="relative text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-lg mt-8 px-5 py-2.5 text-center ring-animation">
+                    <button type="button" className="relative text-white bg-blackhover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-lg mt-8 px-5 py-2.5 text-center ring-animation">
                         <div className='flex items-center justify-center gap-x-3'>
                             Start for free  <HiArrowSmRight size={20} />
                         </div>
@@ -66,10 +66,10 @@ const VideoSection = () => {
                 </select>
             ) : (
                 <center>
-                    <div className='flex justify-center align-middle mx-8     border-blue-500  border- border-4 p-1 py-3 rounded-2xl '>
+                    <div className='flex justify-center align-middle mx-8  border-gray-300border- border-4 p-1 py-3 rounded-full '>
                         {categories.map((category) => (
-                            <button className="relative inline-flex items-center justify-center p-0.5 overflow-hidden  font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white  focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 mx-4 text-xl" onClick={() => setSelectedCategory(category)}>
-                                <span className="relative px-5 py-2  transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-opacity-0">
+                            <button className="inline-flex items-center bg-black text-white justify-center  n   rounded-full  p-3 py-4 mx-4 text-xl" onClick={() => setSelectedCategory(category)}>
+                                <span className="relative mx-2 transition-all ease-in duration-75 bg-black  rounded-md group-hover:bg-opacity-0">
                                     {category.name}
                                 </span>
                             </button>

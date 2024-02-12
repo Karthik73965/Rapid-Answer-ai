@@ -3,6 +3,8 @@ import { GrSafariOption } from "react-icons/gr";
 import Subjechatbot from '../../components/dashboard/Subjectchatbot';
 import { Link } from 'react-router-dom';
 import DashboardNav from './DashboardNav';
+import { BiSolidDislike, BiSolidLike } from 'react-icons/bi';
+import { FaCopy, FaShareFromSquare } from 'react-icons/fa6';
 
 const options = [
   { name: 'Maths', content: 'Homework Help Content' },
@@ -24,21 +26,21 @@ const Sidebar = () => {
       <div style={{ width: '20%', borderRight: '1px solid #ccc' }}>
       <div  className=' px-[40px] py-[10px] text-3xl font-bold ' >
                     <Link to="/">
-                        <h1 className='text  text-slate-900 mt-6 mb-3 mr-10'>DasTekEdu</h1>
+                        <h1 className='text  text-slate-900 mt-6 mb-3 mr-10'>NexGen Study</h1>
                     </Link>
                 </div>
         <div className='text-gradient px-[40px] py-[10px] text-3xl font-bold mb-6 underline'>Subjects</div>
         {options.map((option) => (
           <div
             key={option.name}
-            className={`m-[15px] rounded-xl  ${activeOption === option.name ? 'bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl opacity-90' : ''}`} // Conditional styling
+            className={`m-[15px] rounded-xl  ${activeOption === option.name ? ' text-white bg-black  ' : 'text-black'}`} // Conditional styling
             style={{ cursor: 'pointer' }}
             onClick={() => {
               setActiveContent(option.content);
               setActiveOption(option.name); // Update active option state
             }}
           >
-            <div className='m-3 rounded-lg text-2xl p-1 font-semibold text-slate-900 flex gap-x-2'>
+            <div className='m-3 rounded-lg text-2xl p-1 font-semibold  flex gap-x-2'>
               <GrSafariOption className='m-2' size={20} />
               {option.name}
             </div>
@@ -46,7 +48,7 @@ const Sidebar = () => {
         ))}
       </div>
       <div style={{ width: '80%', padding: '10px' }}> 
-       <Subjechatbot content={activeContent}/>  {/* Pass activeContent as a prop */}
+          <Subjechatbot content={activeContent} />  {/* Pass activeContent as a prop */}
       </div>
     </div>
     </>

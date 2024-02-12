@@ -40,7 +40,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="logo">
                     <Link to="/">
-                        <h1 className='text-xl'>DasTekEdu</h1>
+                        <h1 className='text-xl font-bold '>NexGenStudy Ai</h1>
                     </Link>
                 </div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
                             onMouseEnter={() => setIsDropdownOpen(true)}
                             onMouseLeave={() => setIsDropdownOpen(false)}
                         >   
-                            <span className=" hover:text-green-700 transition ease-in duration-300">Subjects</span>
+                            <Link to={'/dashboard'}><span className=" hover:text-green-700 transition ease-in duration-300">Subjects</span></Link>
                             {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
 
                             {isDropdownOpen && (
@@ -82,7 +82,9 @@ const Navbar = () => {
                             )}
                         </div>
 
-                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Chatbot</span></div>
+                        <Link to={'/dashboard'}>
+                       <div className="dropdown flex justify-center gap-1  align-middle"><span>Chatbot</span></div>
+                       </Link>
                         {/* <div className="dropdown">Pricing</div> */}
                         <Link to={'/Blogs'}>
                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Blogs</span></div>
@@ -97,7 +99,7 @@ const Navbar = () => {
                 <div className="hidden md:flex space-x-4">
                     {login ? (
                         <Link to="/dashboard">
-                           <button className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
+                           <button className="bg-black  font-medium rounded-full text-sm px-5 py-2.5 text-center text-white">
                            <div className='flex items-center justify-center gap-x-3'>
                                         Dashboard <HiArrowSmRight size={20} />
                                     </div>   
@@ -106,12 +108,12 @@ const Navbar = () => {
                     ) : (
                         <>
                             <Link to="/signup">
-                                <button className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
+                                <button className="bg-black  font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
                                     Login
                                 </button>
                             </Link>
                             <Link to="/signin">
-                                <button type="button" className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
+                                <button type="button" className="bg-black  font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
                                     <div className='flex items-center justify-center gap-x-3'>
                                         Start for free <HiArrowSmRight size={20} />
                                     </div>

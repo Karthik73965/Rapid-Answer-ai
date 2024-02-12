@@ -41,7 +41,7 @@ const DashboardNav = ({ LOGO }) => {
             <nav className="flex items-center  justify-evenly p-4">
                 {LOGO && <div style={{ borderRight: '1px solid #ccc' }} className="logo ">
                     <Link to="/">
-                        <h1 className='text-2xl font-bold mr-10'>Dastekedu</h1>
+                        <h1 className='text-2xl font-bold mr-10'>NexGen Study</h1>
                     </Link>
                 </div>}
 
@@ -54,7 +54,7 @@ const DashboardNav = ({ LOGO }) => {
                         onMouseEnter={() => setIsDropdownOpen(true)}
                         onMouseLeave={() => setIsDropdownOpen(false)}
                     >
-                        <span className=" hover:text-green-700 transition text-xl font-bold ease-in duration-300">Subjects</span>
+                       <Link to={'/dashboard'}> <span className=" hover:text-green-700 transition text-xl font-bold ease-in duration-300">Subjects</span></Link>
                         {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
 
                         {isDropdownOpen && (
@@ -97,13 +97,13 @@ const DashboardNav = ({ LOGO }) => {
 
                 {/* Conditionally render buttons based on login state */}
                 <div
-                    className="dropdown flex justify-center items-center mr-44 gap- 4 p-2 rounded-lg cursor-pointer bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+                    className="dropdown flex justify-center items-center mr-44 gap- 4 p-2 rounded-lg cursor-pointer bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
                     onMouseEnter={() => setIsprofileOpen(true)}
                     onMouseLeave={() => setIsprofileOpen(false)}
                 >
-                    <span className="  transition ease-in duration-300 text-white font-bold  "><span className='flex align-middle justify-center' > <CgProfile className='m-1' size={20} />
+                    <span className="  transition ease-in duration-300 text-white font-bold  "><span className='flex align-middle justify-center' > <CgProfile className='m-1 text-white' size={20} />
                         profile</span></span>
-                    {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
+                    {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] text-white transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] text-white transition-transform duration-300' />}
 
                     {isProfileOpen && (
                         <div className="absolute  mt-[145px] py-2 bg-white shadow-lg rounded-lg fade-in">

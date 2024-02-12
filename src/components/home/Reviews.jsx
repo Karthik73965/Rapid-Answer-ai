@@ -13,7 +13,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 export default function Reviews() {
   return (
     <>
-      <h3 className='text-4xl font-bold text-slate-800 flex justify-center  mt-16'>What Students Say our Product </h3>
+      <h3 className='text-4xl font-bold text-gradient flex justify-center  mt-16'>What Students Say our Product </h3>
       <p className='text-gray-700 font-semibold flex justify-center align-middle m-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem fugit explicabo facere!</p>
 
       <Swiper

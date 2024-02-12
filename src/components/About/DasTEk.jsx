@@ -27,7 +27,7 @@ export default function DasTEk() {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi assumenda consectetur labore nemo doloribus saepe soluta voluptatibus, corrupti dolore quia. Rerum, temporibus repellendus.
                         </p>
                         <Link className='flex align-middle justify-center my-6' to="/signin">
-                                <button type="button" className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white flex align-middle justify-center">
+                                <button type="button" className="bg-blackhover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white flex align-middle justify-center">
                                     <div className='flex items-center justify-center gap-x-3'>
                                        Check out Now <HiArrowSmRight size={20} />
                                     </div>

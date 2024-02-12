@@ -24,14 +24,14 @@ const Sidebar = () => {
       <div style={{ width: '20%', borderRight: '1px solid #ccc' }}>
       <div  className=' px-[40px] py-[10px] text-3xl font-bold ' >
                     <Link to="/">
-                        <h1 className='text  text-slate-900 mt-6 mb-3 mr-10'>DasTekEdu</h1>
+                        <h1 className='text  text-slate-900 mt-6 mb-3 mr-10'>NexGen Study</h1>
                     </Link>
                 </div>
         <div className='text-gradient px-[40px] py-[10px] text-3xl font-bold mb-6 underline'>Chat-History</div>
         {options.map((option) => (
           <div
             key={option.name}
-            className={`m-[15px] rounded-xl  ${activeOption === option.name ? 'bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl opacity-90' : ''}`} // Conditional styling
+            className={`m-[15px] rounded-xl  ${activeOption === option.name ? 'bg-black text-white hover:bg-gradient-to-bl opacity-90' : ''}`} // Conditional styling
             style={{ cursor: 'pointer' }}
             onClick={() => {
               setActiveContent(option.content);

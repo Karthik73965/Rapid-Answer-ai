@@ -82,12 +82,12 @@ const [messages, setMessages]= useState([{
     <>
       <Dashnav LOGO={true} />
       <div className='h-[100px]'></div>
-      <section className='border-4 border-blue-400 mx-3 rounded-2xl p-3  shadow-2xl'>
+      <section className='border-2 border-black  mx-3 rounded-2xl p-3  shadow-2xl'>
         <div className=' rounded-lg p-3 '>
           <h1 className=' text-gray-900 font-semibold text-2xl p-1'><u className=' font-bold'>Question-</u> {ThreadInfo.title}</h1>
           <h2 className='p-3 font-semibold'><u className=' font-bold'>Description-</u>{ThreadInfo.description}</h2>
-          {ThreadInfo.tags.map(tag => <span key={tag} className="text p-3 m-3 font-semibold  text-white     bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl rounded-lg px-2 mr-2">{tag}</span>)}
-          <img className='h-[300px] my-10    rounded-xl  border-4 border-blue-400' src={ThreadInfo.imageUrl} />
+          {ThreadInfo.tags.map(tag => <span key={tag} className="text py-2 m-3 font-semibold bg-gray-800 text-white      rounded-lg px-3 mr-2">{tag}</span>)}
+          <img className='h-[300px] my-10    rounded-xl  border-2 border-black ' src={ThreadInfo.imageUrl} />
           <div>
             
         <div className="flex rounded-lg border-2 sticky border-gray-300 overflow-hidden">
@@ -106,7 +106,7 @@ const [messages, setMessages]= useState([{
             />
             <button
               onClick={triggerFileInput}
-              className="py-2 px-4 rounded-full h-10 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl  text-white font-semibold m-1  text-sm"
+              className="py-2 px-4 rounded-full h-10 bg-black   text-white font-semibold m-1  text-sm"
             >
               <MdAddToPhotos />
 
@@ -121,25 +121,25 @@ const [messages, setMessages]= useState([{
             />
             <button
               onClick={sendMessage}
-              className=" bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl  text-white px-4 py-2 focus:outline-none"
+              className=" bg-black rounded-lg  text-white px-4 py-2 focus:outline-none"
             >
               <BsSendPlusFill/>
             </button>
           </div>
         {messages.map((msg, index) => (
-            <div key={index} className={`flex ${msg.sender === username ? 'justify-end' : 'justify-start'}`}>
-              <div className={`rounded-lg px-4 py-2 my-1 ${msg.sender === 'user' ? 'bg-black text-white' : 'bg-gray-200'}`}>
-                <div className='font-bold uppercase rounded-xl text-gradient border-blue-400'>{msg.sender}:-<span className='text-gray-700'>{msg.createdAt}</span></div>
+            <div key={index} className={`flex  ${msg.sender === username ? 'justify-end ' : 'justify-start'}`}>
+              <div className={`rounded-lg px-4 py-2 border border-black my-1 ${msg.sender === 'username' ? '  bg-green-100' : 'bg-gray-100'}`}>
+                <div className='font-bold uppercase rounded-xl text-gradient border-black '>{msg.sender}:-<span className='text-gray-700'>{msg.createdAt}</span></div>
                 <div className='px-3 font-semibold'>{msg.Comment}</div>
 
                 {
                   (msg.sender !== username) &&  (msg.text !== 'HI WELCOME BACL TO HERE DASTEK EDU YOU CAN ASK ANY QUESTIONS HERES') &&
-                  <div className='flex gap-x-10 mt-5'>
-                    <BiSolidLike size={20} />
-                    <BiSolidDislike size={20} />
-                    <FaCopy size={20} />
-                    <FaShareFromSquare size={20} />
-                  </div>
+                  <div className='flex gap-x-4 text-gray-700 mt-5'>
+                  <BiSolidLike size={20} />
+                  <BiSolidDislike size={20} />
+                  <FaCopy size={20} />
+                  <FaShareFromSquare size={20} />
+                </div>
                 }
               </div>
             </div>

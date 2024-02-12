@@ -72,10 +72,10 @@ export default function SpecificHistory({activeOption,optionid}){
         <div className="overflow-auto p-3 mt-10 flex-grow">
           {messages.map((msg, index) => (
             <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`rounded-2xl px-4 py-2 my-1 ${msg.sender === 'user' ? '  border-4 border-blue-400 ' : '  border-4 border-blue-400'}`}>
+              <div className={`rounded-2xl px-4 py-2 my-1 ${msg.sender === 'user' ? '  border-2 border-black bg-green-100' : '  border-2 border-black bg-gray-200'}`}>
                 {
                   (msg.sender === 'server') &&  (msg.text !== 'HI WELCOME BACL TO HERE DASTEK EDU YOU CAN ASK ANY QUESTIONS HERES') &&
-                  <div className='text-gradient font-bold text-xl'>Dastekedu :-</div>
+                  <div className='text-gradient font-bold text-xl'>NexGen Study :-</div>
 
                 }
                 {

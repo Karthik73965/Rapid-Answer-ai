@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { HiArrowSmRight } from 'react-icons/hi';
 import { IoSend, IoImage, IoAttach } from 'react-icons/io5';
 import DashboardNav from './DashboardNav';
+import { BiSolidDislike, BiSolidLike } from 'react-icons/bi';
+import { FaCopy, FaShareFromSquare } from 'react-icons/fa6';
 
 const QuestionForm = ({ endpoint }) => {
     const [question, setQuestion] = useState('');
@@ -26,7 +28,7 @@ const QuestionForm = ({ endpoint }) => {
 
 
             setTimeout(() => {
-                setData("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essential ly unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum  ")
+                setData("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essential ly unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essential ly unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essential ly unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essential ly unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum  ")
                 setIsLoading(false);
             }, 5000
             )
@@ -57,7 +59,7 @@ const QuestionForm = ({ endpoint }) => {
             </div>
             <div className="flex flex-col items-center justify-center p-4">
                 <form className="w-[800px] " onSubmit={handleSubmit}>
-                    <div className="flex items-center  border-2 border-blue-400 w-[800px] px- py-1 rounded-2xl mb-4">
+                    <div className="flex items-center  border-2 border-black w-[800px] px- py-1 rounded-2xl mb-4">
                         <input
                             class="appearance-none bg-transparent  w-full text-gray-900 mr-3 py-1 px-2 leading-tight focus:outline-none h-16 "
                             type="text"
@@ -82,11 +84,20 @@ const QuestionForm = ({ endpoint }) => {
 
                     </div>
                     {isLoading && <div className="loader">Loading...</div>}
-                    {data && <div className="data-display">{JSON.stringify(data)}</div>}
+                    {data && <div className="data-display bg-gray-200 p-3 rounded-lg">{JSON.stringify(data)}
+                    <div className='flex gap-x-4 text-gray-700 mt-5'>
+                    <BiSolidLike size={20} />
+                    <BiSolidDislike size={20} />
+                    <FaCopy size={20} />
+                    <FaShareFromSquare size={20} />
+                  </div>
+                    </div>
+                    }
+        
                 </form>
 
                 {data && !isLoading && (
-                    <button className="bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white"
+                    <button className="bg-black mt-8 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200  font-medium rounded-full text-sm px-5 py-2.5 text-center text-white"
                     onClick={handleNewQuestion}
                     >
                         <div className='flex items-center justify-center gap-x-3'>
