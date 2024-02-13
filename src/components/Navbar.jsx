@@ -7,7 +7,7 @@ import 'tailwindcss/tailwind.css';
 
 const DropdownItem = ({ children }) => {
     return (
-        <div className="hover:text-green-500 hover:bg-blue-100 rounded-2xl mx-1 transition ease-in duration-300 p-2">
+        <div className=" rounded-2xl mx-1 transition ease-in duration-300 p-2">
             {children}
         </div>
     );
@@ -45,65 +45,86 @@ const Navbar = () => {
                 </div>
 
                 {/* Menu items */}
-                     {/* Menu items */}
-                     <div className="hidden md:flex space-x-4 ">
-                        {/* Add dropdown logic and items */}
-                        {/* Dropdown */}
-                        <div
-                            className="dropdown flex justify-center items-center gap- 4 cursor-pointer"
-                            onMouseEnter={() => setIsDropdownOpen(true)}
-                            onMouseLeave={() => setIsDropdownOpen(false)}
-                        >   
-                            <Link to={'/dashboard'}><span className=" hover:text-green-700 transition ease-in duration-300">Subjects</span></Link>
-                            {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
+                {/* Menu items */}
+                <div className="hidden md:flex space-x-4 ">
+                    {/* Add dropdown logic and items */}
+                    {/* Dropdown */}
+                    <div
+                        className="dropdown flex justify-center items-center gap- 4 cursor-pointer"
+                        onMouseEnter={() => setIsDropdownOpen(true)}
+                        onMouseLeave={() => setIsDropdownOpen(false)}
+                    >
+                        <span className=" hover:text-green-700 transition ease-in duration-300">Subjects</span>
+                        {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] transition-transform duration-300' />}
 
-                            {isDropdownOpen && (
-                                <div className="absolute  mt-[235px] py-2 bg-white shadow-lg rounded-lg fade-in">
-                                    <DropdownItem>
-                                        <div className='flex  '>
-                                            <TbMathSymbols color='black' size={'25px'} />
-                                            <div >Maths<p className='text-blue-400'>this is for maths</p></div>
-
-                                        </div>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <div className='flex gap-2'>
-                                            <TbMathSymbols color='black' size={'25px'} />
-                                            <div >Maths<p className='text-blue-400'>this is for maths</p></div>
-                                        </div>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <div className='flex gap-2'>
-                                            <TbMathSymbols color='black' size={'25px'} />
-                                            <div >Maths<p className='text-blue-400'>this is for maths</p></div>
-                                        </div>
-                                    </DropdownItem>
+                        {isDropdownOpen && (
+                            <div className="absolute flex   mt-[300px] py-2 bg-white shadow-lg rounded- fxlade-in">
+                                <div className='m-3 '>
+                                <DropdownItem>
+                                    <div className='flex border-b-[3px] mb-2 '>
+                                        <TbMathSymbols color='black' size={30} />
+                                        <div className='ml-4' >Maths<p className='text-orange-400 '>this is for maths</p></div>
+                                    </div>
+                                </DropdownItem>
+                                <DropdownItem>
+                                    <div className='flex border-b-[3px] mb-2 '>
+                                        <TbMathSymbols color='black' size={30} />
+                                        <div className='ml-4' >Maths<p className='text-orange-400 '>this is for maths</p></div>
+                                    </div>
+                                </DropdownItem>
+                                <DropdownItem>
+                                    <div className='flex border-b-[3px] mb-2 '>
+                                        <TbMathSymbols color='black' size={30} />
+                                        <div className='ml-4' >Maths<p className='text-orange-400 '>this is for maths</p></div>
+                                    </div>
+                                </DropdownItem>
                                 </div>
-                            )}
-                        </div>
-
-                        <Link to={'/dashboard'}>
-                       <div className="dropdown flex justify-center gap-1  align-middle"><span>Chatbot</span></div>
-                       </Link>
-                        {/* <div className="dropdown">Pricing</div> */}
-                        <Link to={'/Blogs'}>
-                       <div className="dropdown flex justify-center gap-1  align-middle"><span>Blogs</span></div>
-                       </Link>
-                       <Link to={'/About'}>
-                       <div className="dropdown flex justify-center gap-1  align-middle"><span>About</span></div>
-                       </Link>
+                                <div className='m-3'>
+                                <DropdownItem>
+                                    <div className='flex border-b-[3px] mb-2 '>
+                                        <TbMathSymbols color='black' size={30} />
+                                        <div className='ml-4' >Maths<p className='text-orange-400 '>this is for maths</p></div>
+                                    </div>
+                                </DropdownItem>
+                                <DropdownItem>
+                                    <div className='flex border-b-[3px] mb-2 '>
+                                        <TbMathSymbols color='black' size={30} />
+                                        <div className='ml-4' >Maths<p className='text-orange-400 '>this is for maths</p></div>
+                                    </div>
+                                </DropdownItem>
+                                <DropdownItem>
+                                    <div className='flex border-b-[3px] mb-2 '>
+                                        <TbMathSymbols color='black' size={30} />
+                                        <div className='ml-4' >Maths<p className='text-orange-400 '>this is for maths</p></div>
+                                    </div>
+                                </DropdownItem>
+                                </div>
+                            </div>
+                        )}
                     </div>
+
+                    <Link to={'/dashboard'}>
+                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Chatbot</span></div>
+                    </Link>
+                    {/* <div className="dropdown">Pricing</div> */}
+                    <Link to={'/Blogs'}>
+                        <div className="dropdown flex justify-center gap-1  align-middle"><span>Blogs</span></div>
+                    </Link>
+                    <Link to={'/About'}>
+                        <div className="dropdown flex justify-center gap-1  align-middle"><span>About</span></div>
+                    </Link>
+                </div>
 
 
                 {/* Conditionally render buttons based on login state */}
                 <div className="hidden md:flex space-x-4">
                     {login ? (
                         <Link to="/dashboard">
-                           <button className="bg-black  font-medium rounded-full text-sm px-5 py-2.5 text-center text-white">
-                           <div className='flex items-center justify-center gap-x-3'>
-                                        Dashboard <HiArrowSmRight size={20} />
-                                    </div>   
-                                </button>
+                            <button className="bg-black  font-medium rounded-full text-sm px-5 py-2.5 text-center text-white">
+                                <div className='flex items-center justify-center gap-x-3'>
+                                    Dashboard <HiArrowSmRight size={20} />
+                                </div>
+                            </button>
                         </Link>
                     ) : (
                         <>
