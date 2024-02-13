@@ -10,6 +10,7 @@ import Chathistory from './pages/Chathistory'
 import About from './pages/About'
 import Blogs from './pages/Blogs'
 import SignupForm from './pages/Signup'
+import Login from './pages/Login'
 
 
 
@@ -27,6 +28,7 @@ export default function App() {
       <Route exact  path='/About' element={<About/>} />
       <Route exact  path='/blogs' element={<Blogs/>} />
       <Route exact  path='/Signup' element={<SignupForm/>} />
+      <Route exact  path='/login' element={<Login/>} />
       <Route
              path="*"
              element={<PageNotFound />}

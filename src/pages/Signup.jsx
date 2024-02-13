@@ -44,7 +44,7 @@ export default function Signup() {
                 <h2 className='text-3xl font-semibold text-center mb-8'>
                   <span role="img" aria-label="party popper">🎉</span>
                   <span className='border-b-2 border-gray-  00'>Create Your Account Now</span>
-                </h2>
+                </h2> 
                 <form onSubmit={handleSubmit}>
                   <div className='grid grid-cols-2 gap-4 mb-4'>
                     <input
