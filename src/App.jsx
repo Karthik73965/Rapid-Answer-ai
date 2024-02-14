@@ -12,7 +12,7 @@ import Blogs from './pages/Blogs'
 import SignupForm from './pages/Signup'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
-
+import ProfileEdit from './pages/ProfileEdit'
 
 
 export default function App() {
@@ -30,7 +30,8 @@ export default function App() {
       <Route exact  path='/blogs' element={<Blogs/>} />
       <Route exact  path='/Signup' element={<SignupForm/>} />
       <Route exact  path='/login' element={<Login/>} />x
-      <Route exact  path='/profile' element={<Profile/>} />x
+      <Route exact  path='/profile' element={<Profile/>} />
+      <Route exact  path='/profileEdit' element={<ProfileEdit/>} />
       <Route
              path="*"
              element={<PageNotFound />}
