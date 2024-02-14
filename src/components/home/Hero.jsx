@@ -10,16 +10,16 @@ export default function Hero() {
     <div className='rounded-3xl text-lg bg-gray-200 border-2 border-gray-300 shadow-2xl text-black font-semibold m-auto w-[300px]  py-2 z-0 '>
     &#129321; <span className='text-gradient font-bold'>10X</span>  more productivity</div>
     <section className=' w-[70vw] m-[40px]'>
-    <span className='text-[78px] text-black font-bold '>The all in one solution for</span><br/> <TypeAnimation
+    <span className='text-[78px] text-black font-bold '>Experience the Next Generation of Education </span><br/> <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'maths problems',
+        'Advanced Learning',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'computer solvings',
+        'Comprehensive Understanding',
         1000,
-        'logical thinking',
+        'Strategic Studying',
         1000,
-        'searching ',
+        'Interactive Education',
         1000
       ]}
       wrapper="span"

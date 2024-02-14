@@ -4,10 +4,10 @@ import { HiArrowSmRight } from 'react-icons/hi';
 
 const categories = [
     { key: 'ld', name: 'Maths ', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the  " },
-    { key: 'se', name: 'problem solving ', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the  " },
-    { key: 'cs', name: 'Attednign sessions', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the   " },
-    { key: 'is', name: 'Information Security', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demothis is the descrition of the things which is usefull for the   " },
-    { key: 'mkt', name: 'Marketing', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the" },
+    { key: 'se', name: 'Science', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the  " },
+    { key: 'cs', name: 'Engineering', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the   " },
+    { key: 'is', name: 'Communication', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demothis is the descrition of the things which is usefull for the   " },
+    { key: 'mkt', name: 'Sociology', heading: 'Dummy heading', description: " this is the descrition of the things which is usefull for the demo this is the descrition of the things which is usefull for the" },
 ];
 
 const ContentDisplay = ({ category }) => {

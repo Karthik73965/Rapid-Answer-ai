@@ -7,7 +7,7 @@ import phonerobo from '../../assests/phone-robo.png'
 export default function Feautures() {
     return (
         <>
-            <main className='m-8 mb-20 feautures rounded-xl p-10    mt-20 '>
+            <main className='m-8 mb-20 feautures rounded-xl p-10  shadow-2xl   mt-20 '>
                 <h3 className='text-4xl font-bold text-gradient flex justify-center text align-middle'>Feautures that will make your study more productive </h3>
                 <p className='flex justify-center align-middle font-semibold text-gray-700   m-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iste voluptatibus nobis.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <section className='flex justify-around align-middle px-10 py-5 m-8 border-2 border-black rounded-3xl'>

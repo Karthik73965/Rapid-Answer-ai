@@ -78,9 +78,9 @@ export default function Aichat() {
         <div className="overflow-auto p-3 flex-grow">
           {messages.map((msg, index) => (
             <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end  ' : 'justify-start'}`}>
-              <div className={`rounded-2xl px-4 py-2 my-1 ${msg.sender === 'user' ? ' min-w-[30vw]  border-2 bg-green-100  border-black' : '  border-2 min-w-[60vw]  border-gray-700 bg-gray-100'}`}>
+              <div className={`rounded-2xl px-4 max-w-[60vw] text-wrap my-5 py-2  ${msg.sender === 'user' ? ' min-w-[30vw]  border-2 bg-green-100  border-black' : '  border-2 min-w-[60vw]  border-gray-700 bg-gray-100'}`}>
                 {
-                  msg.sender =='server' ? <div className='text-gradient font-bold'>{" NextGen :"}</div> : <div className='text-gradient font-bold '>{"You :"}</div>
+                  msg.sender =='server' ? <div className='text-gradient  font-bold'>{" NextGen :"}</div> : <div className='text-gradient font-bold '>{"You :"}</div>
                 }
                 {msg.text}
                 {
