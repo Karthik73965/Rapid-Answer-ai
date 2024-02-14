@@ -118,7 +118,7 @@ const Navbar = () => {
 
                 {/* Conditionally render buttons based on login state */}
                 <div className="hidden md:flex space-x-4">
-                    {login ? (
+                    
                         <Link to="/dashboard">
                             <button className="bg-black  font-medium rounded-full text-sm px-5 py-2.5 text-center text-white">
                                 <div className='flex items-center justify-center gap-x-3'>
@@ -126,8 +126,8 @@ const Navbar = () => {
                                 </div>
                             </button>
                         </Link>
-                    ) : (
-                        <>
+                   
+                      
                             <Link to="/signup">
                                 <button className="bg-black  font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white">
                                     Login
@@ -140,8 +140,6 @@ const Navbar = () => {
                                     </div>
                                 </button>
                             </Link>
-                        </>
-                    )}
                 </div>
             </nav>
         </header>

@@ -96,35 +96,13 @@ const DashboardNav = ({ LOGO }) => {
                 </div>
 
                 {/* Conditionally render buttons based on login state */}
-                <div
-                    className="dropdown flex justify-center items-center mr-44 gap- 4 p-2 rounded-lg cursor-pointer bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
-                    onMouseEnter={() => setIsprofileOpen(true)}
-                    onMouseLeave={() => setIsprofileOpen(false)}
+                <Link to={'/profile'}
+                    className="dropdown flex justify-center items-center mr-44 gap- 4 p-2 rounded-lg cursor-pointer bg-black "
                 >
-                    <span className="  transition ease-in duration-300 text-white font-bold  "><span className='flex align-middle justify-center' > <CgProfile className='m-1 text-white' size={20} />
+                    <span className="  transition ease-in duration-300 text-white font-bold  "><span className='flex align-middle justify-center pr-2' > <CgProfile className='m-1 text-white' size={20} />
                         profile</span></span>
-                    {isDropdownOpen ? <RiArrowDropUpLine className='m-[5px] text-white transition-transform duration-300' /> : <RiArrowDropDownLine className='m-[5px] text-white transition-transform duration-300' />}
-
-                    {isProfileOpen && (
-                        <div className="absolute  mt-[145px] py-2 bg-white shadow-lg rounded-lg fade-in">
-                            <DropdownItem>
-                                <div className='flex  '>
-                                    <TbMathSymbols color='black' size={'25px'} />
-                                    <div className='' >Settigns</div>
-
-                                </div>
-                            </DropdownItem>
-                            <DropdownItem>
-                                <div className='flex  '>
-                                    <TbMathSymbols color='black' size={'25px'} />
-                                    <div >Logout</div>
-
-                                </div>
-                            </DropdownItem>
-
-                        </div>
-                    )}
-                </div>
+                    
+                </Link>
 
             </nav>
         </header>

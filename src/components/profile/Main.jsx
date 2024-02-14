@@ -2,6 +2,7 @@ import React from 'react'
 import { MdEmail } from "react-icons/md";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { HiOutlinePencil } from "react-icons/hi2";
+import { Link } from 'react-router-dom';
 
 
 export default function Main() {
@@ -48,9 +49,11 @@ export default function Main() {
                                     <span className='border-b-4 border-gray-300'>Institution</span>
                                 </div>
                             </div>
-                            <button type='button' className='mt-6 text-xl bg-black flex gap-x-3 rounded-full text-white px-10 py-3'>
+                            <Link to={'/profileEdit'}>
+                                <button type='button' className='mt-6 text-xl bg-black flex gap-x-3 rounded-full text-white px-10 py-3'>
                                 Edit    <HiOutlinePencil size={20} className='m-1' />
                             </button>
+                            </Link>
                         </section>
                     </div>
 
